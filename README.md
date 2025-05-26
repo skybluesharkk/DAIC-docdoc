@@ -1,14 +1,6 @@
-# DAIC-Template
+# DAIC-docdoc
 > **PNU x Upstage: DOCUMENT AI CHALLENGE 리포지토리 템플릿입니다. 아래 마크다운을 프로젝트 리포지토리 형식에 맞춰서 리드미를 작성해주시면 됩니다.**
 
-* `>`로 작성된 부분은 없애고 작성해주시면 됩니다.
-* 해당 리포지토리를 fork해서 그대로 사용해주시면 됩니다. fork시 리포지토리 이름은 `DAIC-[TEAM_NAME]`으로 해주세요.
-* 제출 마감일 이전까지 GitHub 리포지토리 main 브랜치에 커밋이 반영되어 있어야 유효 제출로 간주됩니다.
-* README.md는 심사 기준과 연결된 내용을 의식하여 작성하는 것이 중요합니다 (예: API 활용, 문제 해결 효과 등).
-
-<br>
-
-```md
 # [프로젝트 이름]
 
 ## 📌 개요
@@ -46,18 +38,18 @@
 > 실제로 배포하고 있다면, 배포 중인 사이트를 알려주셔도 됩니다.
 > 아래는 예시입니다.
 
-\```bash
+```bash
 git clone https://github.com/your-username/project-name.git
 cd project-name
 pip install -r requirements.txt
-\```
+```
 
 ## 📁 프로젝트 구조
 > 프로젝트 루트 디렉토리에서 주요 파일 및 폴더의 역할 및 목적을 작성해주세요.
 > 필요없다고 생각되는 부분은 생략하셔도 됩니다.
 > 아래는 예시입니다.
 
-\```bash
+```bash
 project-name/
 ├── README.md               # 프로젝트 설명서
 ├── app.py                  # 애플리케이션 메인 파일
@@ -68,7 +60,7 @@ project-name/
 ├── assets/                 # 이미지, 동영상, 샘플 출력 등
 ├── data/                   # 샘플 입력/출력 데이터
 └── tests/                  # 테스트 코드
-\```
+```
 
 ## 🧑‍🤝‍🧑 팀원 소개
 > 각 팀원 소개 및 역할을 작성해주세요.
@@ -87,7 +79,6 @@ project-name/
 * [Upstage Document Parse](https://www.upstage.ai/products/document-parse)
 * [Upstage Building end-to-end RAG system using Solar LLM and MongoDB Atlas](https://www.upstage.ai/blog/en/building-rag-system-using-solar-llm-and-mongodb-atlas)
 
-```
 
  
 
