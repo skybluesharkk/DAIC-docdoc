@@ -40,6 +40,11 @@
 
 ## 🖼️ 데모
 > [배포 링크 https://daic-docdoc.vercel.app/](https://daic-docdoc.vercel.app/)
+
+> 데모 시연 영상
+
+[![Video Label](http://img.youtube.com/vi/Kh-VsqqjvLk/0.jpg)](https://youtu.be/Kh-VsqqjvLk)
+
 <img width="1604" alt="image" src="https://github.com/user-attachments/assets/564abd55-b113-4976-9104-8703bb4bd2f2" />
 <img width="1604" alt="image" src="https://github.com/user-attachments/assets/84697365-291c-4afe-a119-c6730e11a248" />
 <img width="1624" alt="image" src="https://github.com/user-attachments/assets/1887b1aa-ea3d-4241-979d-61106220757b" />
