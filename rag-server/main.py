@@ -89,9 +89,8 @@ class LLMService:
             self.client = ChatUpstage(
                 api_key=config.get_upstage_api_key(),
                 model=config.UPSTAGE_MODEL,
-                reasoning_effort="high",
                 streaming=True,
-                temperature=0.1
+                temperature=0
             )
             
             # 임베딩 및 벡터스토어 설정
