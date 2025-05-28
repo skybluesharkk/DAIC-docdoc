@@ -91,7 +91,9 @@ DAIC-docdoc/
 │   ├── chunk_pdf_summarizer.py    # 논문 요약 로직
 │   ├── crawler.py                 # 논문 크롤링 로직
 │   └── indexer.py                 # DP 파싱, 임베딩 로직
-└── tests/                  # 테스트 코드
+└── FE/                            # 프론트
+    └── docdoc
+    
 
 ```
 
