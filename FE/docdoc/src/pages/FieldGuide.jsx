@@ -1,0 +1,21 @@
+import React from 'react'
+import styled from 'styled-components';
+const StDiv = styled.div`
+  margin-top:1rem;
+  display: flex;
+  height: calc(100vh - 3rem);
+  padding: 1.5rem;
+  gap: 1rem;
+  background-color: #f6faff;
+  box-sizing: border-box;
+`;
+
+const FieldGuide = () => {
+  return (
+    <StDiv>
+
+    </StDiv>
+  )
+}
+
+export default FieldGuide
