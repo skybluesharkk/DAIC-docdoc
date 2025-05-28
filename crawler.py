@@ -5,32 +5,45 @@ from urllib.parse import urlparse, unquote
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
+
 # ─── 설정 ────────────────────────────────────────────────
-BASE_URL = "https://scholar.google.co.kr/scholar"
+BASE_URL = "https://scholar.google.co.kr/scholar"          # 구글 학술검색
 HEADERS = {
-    "User-Agent": (
+    "User-Agent": (                                        # 봇 차단을 위한 헤더 설정
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/114.0.0.0 Safari/537.36"
     )
 }
-KEYWORDS = [
+
+"""
+국경없는 의사회의 2023년 공식 활동 보고서에서 가장 많이 파견한 상위 10개국의 나라에서 
+많이 발생하는 질병들의 리스트 = 검색할 질병들
+"""
+KEYWORDS = ["Measles", "Cholera", "Hepatitis A", "Malaria",   
+    "Acute Watery Diarrhoea", "Diphtheria"
     "Respiratory Infections", "Diarrheal Diseases",
     "Trauma Care", "Burn Treatment"
+
+    """
+    홍역, 콜레라, A형 간염, 말라리아,
+    급성 수인성 설사, 디프테리아,
+    호흡기 감염, 설사 질환,
+    외상 치료, 화상 치료료
+    """
 ]
-""""Measles", "Cholera", "Hepatitis A", "Malaria",   
-    "Acute Watery Diarrhoea", "Diphtheria"""
+
 OUTPUT_DIR = "downloaded_pdfs"
 
-# ★ 목표 다운로드 성공 개수
+# 목표 다운로드 성공 개수
 MAX_DOWNLOADS = 50
 
-# ★ 키워드당 여유 있게 수집할 링크 수
+# 키워드당 여유 있게 수집할 링크 수
 MAX_PER_KEYWORD = 15     
 
 MAX_PAGES_PER_KEYWORD = 20
 DELAY_BETWEEN_PAGES = 10
-MAX_FILE_SIZE = 50 * 1024 * 1024  # 50MB로 상향
+MAX_FILE_SIZE = 100 * 1024 * 1024  # 100MB 넘어가면 스킵(너무 느려짐)
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -55,13 +68,13 @@ def fetch_pdf_links_one_page(query: str, page: int):
 def collect_pdf_links(keywords):
     """
     키워드별로 MAX_PER_KEYWORD 링크를 모아서
-    총 최대 len(keywords) * MAX_PER_KEYWORD 개 링크 반환
+    총 최대 len(keywords) * MAX_PER_KEYWORD개 링크 반환
     """
     collected = []
     seen = set()
 
     for kw in keywords:
-        print(f"\n▶ '{kw}' 검색 시작 (최대 {MAX_PER_KEYWORD}개)")
+        print(f"\n '{kw}' 검색 시작 (최대 {MAX_PER_KEYWORD}개)")
         per_count = 0
 
         for page in range(MAX_PAGES_PER_KEYWORD):
@@ -139,7 +152,7 @@ def download_pdfs(urls, output_dir):
         except Exception:
             continue
 
-    print(f"\n✅ 총 {success_count}개 파일 다운로드 성공")
+    print(f"\n 총 {success_count}개 파일 다운로드 성공")
 
 if __name__ == "__main__":
     # 1) 링크 수집
@@ -148,4 +161,4 @@ if __name__ == "__main__":
     # 2) 다운로드 (100개 채울 때까지)
     download_pdfs(all_links, OUTPUT_DIR)
 
-    print("\n🎉 모든 작업 완료")
+    print("\n 모든 작업 완료")
