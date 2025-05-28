@@ -66,8 +66,8 @@
 > 아래는 예시입니다.
 
 ```bash
-git clone https://github.com/your-username/project-name.git
-cd project-name
+git clone https://github.com/skybluesharkk/DAIC-docdoc.git
+cd DAIC-docdoc.git
 pip install -r requirements.txt
 ```
 
