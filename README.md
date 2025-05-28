@@ -42,6 +42,7 @@
 > 스크린샷이나 데모 영상(GIF 또는 구글 드라이브 링크 등)을 포함해주세요.
 - 예시:  
   ![데모 스크린샷](./assets/demo.png)
+  
 
 ## 🔬 기술 구현 요약
 ### 프론트엔드 및 백엔드 아키텍처
@@ -78,14 +79,18 @@ pip install -r requirements.txt
 
 ```bash
 DAIC-docdoc/
-├── README.md               # 프로젝트 설명서
-├── backend/                # 노드 백엔드 서버
+├── README.md                      # 프로젝트 설명서
+├── backend/                       # 노드 백엔드 서버
 │   ├── main.js             
-│   ├── routes/             # 라우트 처리 
-│   └── lib/                # Config
-├── rag-server/             # RAG용 웹소켓 서버
-│   ├── main.py             # RAG 시스템 클래스 및 웹소켓 서버 로직
+│   ├── routes/                    # 라우트 처리 
+│   └── lib/                       # Config
+├── rag-server/                    # RAG용 웹소켓 서버
+│   ├── main.py                    # RAG 시스템 클래스 및 웹소켓 서버 로직
 │   └── config.py
+├── crawler/                       # 크롤러 소스코드
+│   ├── chunk_pdf_summarizer.py    # 논문 요약 로직
+│   ├── crawler.py                 # 논문 크롤링 로직
+│   └── indexer.py                 # DP 파싱, 임베딩 로직
 └── tests/                  # 테스트 코드
 
 ```
