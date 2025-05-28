@@ -12,7 +12,7 @@ class Config:
     PINECONE_INDEX_NAME: str = "ngo-medical"
     
     # LLM 설정
-    UPSTAGE_MODEL: str = "solar-pro2-preview"
+    UPSTAGE_MODEL: str = "solar-pro"
     EMBEDDING_MODEL: str = "embedding-query"
     
     # 검색 설정
