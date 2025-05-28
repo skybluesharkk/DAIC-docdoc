@@ -68,7 +68,7 @@
 
 ```bash
 git clone https://github.com/skybluesharkk/DAIC-docdoc.git
-cd DAIC-docdoc.git
+cd DAIC-docdoc
 pip install -r requirements.txt
 ```
 
@@ -81,12 +81,12 @@ pip install -r requirements.txt
 DAIC-docdoc/
 ├── README.md                      # 프로젝트 설명서
 ├── backend/                       # 노드 백엔드 서버
-│   ├── main.js             
+│   ├── main.js                    # 백엔드 서버 메인 진입점
 │   ├── routes/                    # 라우트 처리 
 │   └── lib/                       # Config
 ├── rag-server/                    # RAG용 웹소켓 서버
 │   ├── main.py                    # RAG 시스템 클래스 및 웹소켓 서버 로직
-│   └── config.py
+│   └── config.py                  # Config
 ├── crawler/                       # 크롤러 소스코드
 │   ├── chunk_pdf_summarizer.py    # 논문 요약 로직
 │   ├── crawler.py                 # 논문 크롤링 로직
