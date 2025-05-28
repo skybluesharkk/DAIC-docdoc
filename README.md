@@ -103,8 +103,8 @@ project-name/
 * [Upstage Document Parse](https://www.upstage.ai/products/document-parse)
 * [Upstage Building end-to-end RAG system using Solar LLM and MongoDB Atlas](https://www.upstage.ai/blog/en/building-rag-system-using-solar-llm-and-mongodb-atlas)
 * [Wikidocs RAG](https://wikidocs.net/233780)
+* [Pinecone Docs - LangChain](https://docs.pinecone.io/integrations/langchain)
 * [Python Crawler](https://velog.io/@kjyeon1101/Python-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%81%AC%EB%A1%A4%EB%A7%81%EC%9C%BC%EB%A1%9C-%ED%8C%8C%EC%9D%BC%EB%93%A4-%EB%8B%A4%EC%9A%B4%EB%B0%9B%EA%B8%B0)
-* 
 
 
  
